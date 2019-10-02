@@ -1,0 +1,6 @@
+projectKey=hadoop-hive-client
+serverUrl=http://localhost:5200
+serverVersion=7.9.1.27448
+dashboardUrl=http://localhost:5200/dashboard?id=hadoop-hive-client
+ceTaskId=AW2KNORsmLHJoIGe3edA
+ceTaskUrl=http://localhost:5200/api/ce/task?id=AW2KNORsmLHJoIGe3edA
