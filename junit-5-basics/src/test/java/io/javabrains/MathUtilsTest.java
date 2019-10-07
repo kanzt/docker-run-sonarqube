@@ -8,10 +8,13 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class MathUtilsTest {
 // @BeforeAll > @BeforeEach > @Test > @AfterEach > ... > @AfterAll
+// @Disabled("All test in this class will be skipped")  << Class level and Method level
 //	assertTrue
 //	assertFalse,
 //	assertNull
@@ -21,7 +24,7 @@ class MathUtilsTest {
 //	assertIterableEquals
 //	assertLinesMatch
 //	assertNotEquals
-//	assertSame
+//	assertSame		check if same object
 //	assertNotSame
 	@Test
 	void test1() {
@@ -29,6 +32,7 @@ class MathUtilsTest {
 	}
 
 	@Test
+	@Disabled("All test in this class will be skipped")
 	void test2() {
 		assertTimeout(ofMinutes(2), () -> {
 			// Perform task that takes less than 2 minutes.
@@ -37,6 +41,7 @@ class MathUtilsTest {
 	}
 
 	@Test
+	@DisplayName("A special test case")  // annotation ใช้ในการ override ชื่อ test class หรือ method ด้วยการทำ custom message พร้อมสามารถใช้งาน special characters หรือ emojis ได้ด้วย
 	void test3() {
 		assertTimeout(ofMillis(10), () -> {
 			// Perform task that takes less than 10 milliseconds.
